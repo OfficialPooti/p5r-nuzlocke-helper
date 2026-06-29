@@ -1661,20 +1661,18 @@
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;"><span style="width:16px;height:16px;background:#e4002b;display:inline-block;transform:skewX(-10deg);"></span><span style="font-family:'Anton',sans-serif;font-size:24px;text-transform:uppercase;transform:skewX(-6deg);">Palaces</span><span style="color:#8a8580;font-size:14px;">— one Persona each</span></div>
         <div style="overflow-x:auto;">
         <div style="min-width:700px;">
-          <div style="display:grid;grid-template-columns:minmax(168px,1.5fr) 62px minmax(120px,1.3fr) minmax(92px,1fr) minmax(120px,1.3fr) 46px;">
+          <div style="display:grid;grid-template-columns:minmax(168px,1.5fr) 62px minmax(120px,1.3fr) minmax(120px,1.3fr) 46px;">
             <div style="background:#e4002b;color:#0c0b0c;font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:0.03em;font-size:12.5px;padding:10px;display:flex;align-items:center;">Area</div>
             <div style="background:#e4002b;color:#0c0b0c;font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:0.03em;font-size:12.5px;padding:10px;display:flex;align-items:center;">Cap</div>
             <div style="background:#e4002b;color:#0c0b0c;font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:0.03em;font-size:12.5px;padding:10px;display:flex;align-items:center;">Persona Caught</div>
-            <div style="background:#e4002b;color:#0c0b0c;font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:0.03em;font-size:12.5px;padding:10px;display:flex;align-items:center;">Arcana</div>
             <div style="background:#e4002b;color:#0c0b0c;font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:0.03em;font-size:12.5px;padding:10px;display:flex;align-items:center;">Notes</div>
             <div style="background:#e4002b;color:#0c0b0c;font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:0.03em;font-size:12.5px;padding:10px;display:flex;align-items:center;justify-content:center;">✓</div>
           </div>
           <sc-for list="{{ palaces }}" as="row" hint-placeholder-count="9">
-            <div style="display:grid;grid-template-columns:minmax(168px,1.5fr) 62px minmax(120px,1.3fr) minmax(92px,1fr) minmax(120px,1.3fr) 46px;align-items:center;background:{{ row.bg }};border-bottom:1px solid rgba(255,255,255,0.06);">
+            <div style="display:grid;grid-template-columns:minmax(168px,1.5fr) 62px minmax(120px,1.3fr) minmax(120px,1.3fr) 46px;align-items:center;background:{{ row.bg }};border-bottom:1px solid rgba(255,255,255,0.06);">
               <div style="padding:6px 10px;"><div style="font-weight:600;font-size:15px;">{{ row.area }}</div><div style="color:#8a8580;font-size:12.5px;">{{ row.ruler }}</div></div>
               <div style="padding:6px 10px;"><span style="display:inline-block;font-family:'Anton',sans-serif;font-size:13px;background:rgba(228,0,43,0.16);color:#ff5a73;padding:3px 9px;white-space:nowrap;">{{ row.capLabel }}</span></div>
               <div style="padding:2px 6px;"><input value="{{ row.persona }}" onChange="{{ row.onPersona }}" placeholder="—" style="width:100%;background:rgba(255,255,255,0.03);border:none;border-bottom:1px solid rgba(255,255,255,0.14);color:#fff;font-size:15px;padding:8px;outline:none;border-radius:0;" style-focus="background:rgba(228,0,43,0.10);border-bottom-color:#e4002b;"></div>
-              <div style="padding:2px 6px;"><input value="{{ row.arcana }}" onChange="{{ row.onArcana }}" placeholder="—" style="width:100%;background:rgba(255,255,255,0.03);border:none;border-bottom:1px solid rgba(255,255,255,0.14);color:#fff;font-size:15px;padding:8px;outline:none;border-radius:0;" style-focus="background:rgba(228,0,43,0.10);border-bottom-color:#e4002b;"></div>
               <div style="padding:2px 6px;"><input value="{{ row.notes }}" onChange="{{ row.onNotes }}" placeholder="—" style="width:100%;background:rgba(255,255,255,0.03);border:none;border-bottom:1px solid rgba(255,255,255,0.14);color:#fff;font-size:15px;padding:8px;outline:none;border-radius:0;" style-focus="background:rgba(228,0,43,0.10);border-bottom-color:#e4002b;"></div>
               <div style="padding:6px 10px;display:flex;justify-content:center;align-items:center;"><input type="checkbox" checked="{{ row.caught }}" onChange="{{ row.toggleCaught }}" style="width:22px;height:22px;cursor:pointer;"></div>
             </div>
@@ -1687,20 +1685,18 @@
         <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;"><span style="width:16px;height:16px;background:#e4002b;display:inline-block;transform:skewX(-10deg);"></span><span style="font-family:'Anton',sans-serif;font-size:24px;text-transform:uppercase;transform:skewX(-6deg);">Mementos</span><span style="color:#8a8580;font-size:14px;">— one Persona per path</span></div>
         <div style="overflow-x:auto;">
         <div style="min-width:700px;">
-          <div style="display:grid;grid-template-columns:minmax(168px,1.5fr) 62px minmax(120px,1.3fr) minmax(92px,1fr) minmax(120px,1.3fr) 46px;">
+          <div style="display:grid;grid-template-columns:minmax(168px,1.5fr) 62px minmax(120px,1.3fr) minmax(120px,1.3fr) 46px;">
             <div style="background:#e4002b;color:#0c0b0c;font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:0.03em;font-size:12.5px;padding:10px;display:flex;align-items:center;">Path</div>
             <div style="background:#e4002b;color:#0c0b0c;font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:0.03em;font-size:12.5px;padding:10px;display:flex;align-items:center;">Cap</div>
             <div style="background:#e4002b;color:#0c0b0c;font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:0.03em;font-size:12.5px;padding:10px;display:flex;align-items:center;">Persona Caught</div>
-            <div style="background:#e4002b;color:#0c0b0c;font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:0.03em;font-size:12.5px;padding:10px;display:flex;align-items:center;">Arcana</div>
             <div style="background:#e4002b;color:#0c0b0c;font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:0.03em;font-size:12.5px;padding:10px;display:flex;align-items:center;">Notes</div>
             <div style="background:#e4002b;color:#0c0b0c;font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:0.03em;font-size:12.5px;padding:10px;display:flex;align-items:center;justify-content:center;">✓</div>
           </div>
           <sc-for list="{{ mementos }}" as="row" hint-placeholder-count="8">
-            <div style="display:grid;grid-template-columns:minmax(168px,1.5fr) 62px minmax(120px,1.3fr) minmax(92px,1fr) minmax(120px,1.3fr) 46px;align-items:center;background:{{ row.bg }};border-bottom:1px solid rgba(255,255,255,0.06);">
+            <div style="display:grid;grid-template-columns:minmax(168px,1.5fr) 62px minmax(120px,1.3fr) minmax(120px,1.3fr) 46px;align-items:center;background:{{ row.bg }};border-bottom:1px solid rgba(255,255,255,0.06);">
               <div style="padding:6px 10px;"><div style="font-weight:600;font-size:15px;">{{ row.area }}</div><div style="color:#8a8580;font-size:12.5px;">{{ row.ruler }}</div></div>
               <div style="padding:6px 10px;"><span style="display:inline-block;font-family:'Anton',sans-serif;font-size:13px;background:rgba(228,0,43,0.16);color:#ff5a73;padding:3px 9px;white-space:nowrap;">{{ row.capLabel }}</span></div>
               <div style="padding:2px 6px;"><input value="{{ row.persona }}" onChange="{{ row.onPersona }}" placeholder="—" style="width:100%;background:rgba(255,255,255,0.03);border:none;border-bottom:1px solid rgba(255,255,255,0.14);color:#fff;font-size:15px;padding:8px;outline:none;border-radius:0;" style-focus="background:rgba(228,0,43,0.10);border-bottom-color:#e4002b;"></div>
-              <div style="padding:2px 6px;"><input value="{{ row.arcana }}" onChange="{{ row.onArcana }}" placeholder="—" style="width:100%;background:rgba(255,255,255,0.03);border:none;border-bottom:1px solid rgba(255,255,255,0.14);color:#fff;font-size:15px;padding:8px;outline:none;border-radius:0;" style-focus="background:rgba(228,0,43,0.10);border-bottom-color:#e4002b;"></div>
               <div style="padding:2px 6px;"><input value="{{ row.notes }}" onChange="{{ row.onNotes }}" placeholder="—" style="width:100%;background:rgba(255,255,255,0.03);border:none;border-bottom:1px solid rgba(255,255,255,0.14);color:#fff;font-size:15px;padding:8px;outline:none;border-radius:0;" style-focus="background:rgba(228,0,43,0.10);border-bottom-color:#e4002b;"></div>
               <div style="padding:6px 10px;display:flex;justify-content:center;align-items:center;"><input type="checkbox" checked="{{ row.caught }}" onChange="{{ row.toggleCaught }}" style="width:22px;height:22px;cursor:pointer;"></div>
             </div>
@@ -1735,13 +1731,13 @@
             <div style="padding:8px 10px;color:#cfcac2;font-size:14.5px;">{{ row.arcana }}</div>
             <div style="padding:8px 10px;color:#8a8580;font-size:14px;">{{ row.joined }}</div>
             <div style="padding:2px 6px;"><input value="{{ row.level }}" onChange="{{ row.onLevel }}" placeholder="–" style="width:48px;background:rgba(255,255,255,0.03);border:none;border-bottom:1px solid rgba(255,255,255,0.14);color:#fff;font-size:15px;padding:8px 6px;outline:none;text-align:center;border-radius:0;" style-focus="background:rgba(228,0,43,0.10);border-bottom-color:#e4002b;"></div>
-            <div style="padding:6px 10px;"><select value="{{ row.status }}" onChange="{{ row.onStatus }}" style="background:#0c0b0c;color:{{ row.statusColor }};border:1px solid {{ row.statusColor }};font-family:'Anton',sans-serif;font-size:13px;padding:7px 10px;text-transform:uppercase;cursor:pointer;letter-spacing:0.03em;"><option value="Alive">Alive</option><option value="Benched">Benched</option><option value="KO'd">KO'd / Dead</option></select></div>
+            <div style="padding:6px 10px;"><select value="{{ row.status }}" onChange="{{ row.onStatus }}" style="background:#0c0b0c;color:{{ row.statusColor }};border:1px solid {{ row.statusColor }};font-family:'Anton',sans-serif;font-size:13px;padding:7px 10px;text-transform:uppercase;cursor:pointer;letter-spacing:0.03em;"><option value="Alive">Alive</option><option value="KO'd">KO'd / Dead</option></select></div>
             <div style="padding:2px 6px;"><input value="{{ row.notes }}" onChange="{{ row.onNotes }}" placeholder="—" style="width:100%;background:rgba(255,255,255,0.03);border:none;border-bottom:1px solid rgba(255,255,255,0.14);color:#fff;font-size:15px;padding:8px;outline:none;border-radius:0;" style-focus="background:rgba(228,0,43,0.10);border-bottom-color:#e4002b;"></div>
           </div>
         </sc-for>
       </div>
       </div>
-      <p style="color:#8a8580;font-size:14px;margin-top:16px;max-width:720px;">A fallen teammate is <strong style="color:#e4002b;">dead for good</strong> — set them to KO'd and bench them permanently. <strong style="color:#fff;">Benched</strong> is for thieves you're keeping in reserve but not using. Win the run with at least one original member still <strong style="color:#37c46b;">Alive</strong>.</p>
+      <p style="color:#8a8580;font-size:14px;margin-top:16px;max-width:720px;">A fallen teammate is <strong style="color:#e4002b;">dead for good</strong> — set them to KO'd permanently. Win the run with at least one original member still <strong style="color:#37c46b;">Alive</strong>.</p>
     </div>
     </sc-if>
 
@@ -1960,14 +1956,13 @@ class Component extends DCLogic {
       capLabel: "LV " + r.cap,
       bg: i % 2 ? "rgba(255,255,255,0.025)" : "transparent",
       onPersona: (e) => this.setCell(section, i, "persona", e.target.value),
-      onArcana: (e) => this.setCell(section, i, "arcana", e.target.value),
       onNotes: (e) => this.setCell(section, i, "notes", e.target.value),
       toggleCaught: (e) => this.setCell(section, i, "caught", e.target.checked),
     }));
   }
 
   mkParty() {
-    const colors = { Alive: "#37c46b", Benched: "#e8a317", "KO'd": "#e4002b" };
+    const colors = { Alive: "#37c46b", "KO'd": "#e4002b" };
     return this.state.data.party.map((r, i) => {
       const st = r.status || "Alive";
       return {
